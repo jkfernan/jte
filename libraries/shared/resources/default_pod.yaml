@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: jnlp
+    image: jenkins/jnlp-slave:latest
+  - name: default
+    image: jenkins/inbound-agent:latest
+    command: ["cat"]
+    tty: true
